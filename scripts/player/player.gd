@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 onready var animated_sprite := $AnimatedSprite
+onready var diaglog_box := $DialogBox/Label
 
 const SPEED := 75
 const DIRECTION_TO_FRAME := {
@@ -14,6 +15,7 @@ var direction := Vector2.RIGHT
 
 
 func _ready() -> void:
+	diaglog_box.visible = false
 	animated_sprite.flip_h = false if direction.x == 1 else true
 
 
@@ -34,6 +36,14 @@ func set_sprite_direction() -> void:
 	direction_key.x = abs(direction_key.x)
 	if direction_key in DIRECTION_TO_FRAME:
 		animated_sprite.flip_h = sign(direction.x) == -1
+
+func show_dialog_box(text: String) -> void:
+	diaglog_box.text = text
+	diaglog_box.visible = true
+
+func hide_dialog_box() -> void:
+	diaglog_box.text = ""
+	diaglog_box.visible = false
 
 
 

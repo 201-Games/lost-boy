@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/animations/characters/player/die/RobinHood.atlastex" type="Texture" id=1]
 [ext_resource path="res://assets/animations/characters/player/die/RobinHood3.atlastex" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://assets/animations/characters/player/idle/RobinHood.atlastex" type="Texture" id=15]
 [ext_resource path="res://assets/animations/characters/player/hurt/RobinHood2.atlastex" type="Texture" id=16]
 [ext_resource path="res://assets/animations/characters/player/die/RobinHood2.atlastex" type="Texture" id=17]
+[ext_resource path="res://assets/fonts/font.tres" type="DynamicFont" id=18]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -50,9 +51,24 @@ script = ExtResource( 14 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3 )
 shape = SubResource( 2 )
+
+[node name="DialogBox" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="DialogBox"]
+margin_left = -35.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = -13.0
+custom_fonts/font = ExtResource( 18 )
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
