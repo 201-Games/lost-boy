@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/characters/lancelot_.png" type="Texture" id=1]
+[ext_resource path="res://addons/sprite_cutter/AtlasScene.gd" type="Script" id=2]
+
+[node name="AtlasScene" type="Node"]
+script = ExtResource( 2 )
+destination_path = "res://assets/animations/characters/player/idle"
+
+[node name="Lancelot" type="Sprite" parent="."]
+position = Vector2( -8, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 9, 9, 13, 19 )
+
+[node name="Lancelot2" type="Sprite" parent="."]
+position = Vector2( -8, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 41, 10, 13, 18 )
+
+[node name="Lancelot3" type="Sprite" parent="."]
+position = Vector2( -8, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 73, 10, 13, 18 )
+
+[node name="Lancelot4" type="Sprite" parent="."]
+position = Vector2( -8, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 105, 10, 13, 18 )
