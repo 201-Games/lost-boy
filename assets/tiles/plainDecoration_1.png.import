@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/forestCliff_.png-eea02090b51839568ffb3294f114e556.stex"
+path="res://.import/plainDecoration_1.png-992863a08048bc66535cdcaff0a04351.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest_tiles/forestCliff_.png"
-dest_files=[ "res://.import/forestCliff_.png-eea02090b51839568ffb3294f114e556.stex" ]
+source_file="res://assets/tiles/plainDecoration_1.png"
+dest_files=[ "res://.import/plainDecoration_1.png-992863a08048bc66535cdcaff0a04351.stex" ]
 
 [params]
 
