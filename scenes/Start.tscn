@@ -49,6 +49,7 @@ position = Vector2( 71, 69 )
 
 [node name="TreeGreen3" parent="Trees" instance=ExtResource( 3 )]
 position = Vector2( 93, 63 )
+scale = Vector2( 0.98912, 1 )
 
 [node name="TreeGreen5" parent="Trees" instance=ExtResource( 3 )]
 position = Vector2( 74, 89 )
