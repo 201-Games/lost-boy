@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/forestDecoration_2.png-78c8a03104fdfead990fd16cbae8ecc8.stex"
+path="res://.import/swampDecoration_0.png-8b07f29858bd2d0b74fe096be88390e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest_tiles/forestDecoration_2.png"
-dest_files=[ "res://.import/forestDecoration_2.png-78c8a03104fdfead990fd16cbae8ecc8.stex" ]
+source_file="res://assets/tiles/swampDecoration_0.png"
+dest_files=[ "res://.import/swampDecoration_0.png-8b07f29858bd2d0b74fe096be88390e0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/robinHood_.png-99610013b5bf1a8c55b8391fc5e333e4.stex"
+path="res://.import/plainDecoration_2.png-9ba147f1a62f7964db4f17c0e63698f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/props/robinHood_.png"
-dest_files=[ "res://.import/robinHood_.png-99610013b5bf1a8c55b8391fc5e333e4.stex" ]
+source_file="res://assets/tiles/plainDecoration_2.png"
+dest_files=[ "res://.import/plainDecoration_2.png-9ba147f1a62f7964db4f17c0e63698f8.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
