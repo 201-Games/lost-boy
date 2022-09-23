@@ -1,32 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://assets/characters/robinHood_.png" type="Texture" id=1]
 [ext_resource path="res://addons/sprite_cutter/AtlasScene.gd" type="Script" id=2]
 
 [node name="AtlasScene" type="Node"]
 script = ExtResource( 2 )
 destination_path = "res://assets/animations/characters/player/run"
-
-[node name="RobinHood" type="Sprite" parent="."]
-position = Vector2( 0, 256 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 5, 49, 14, 22 )
-
-[node name="RobinHood2" type="Sprite" parent="."]
-position = Vector2( 0, 256 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 29, 49, 14, 23 )
-
-[node name="RobinHood3" type="Sprite" parent="."]
-position = Vector2( 0, 256 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 53, 49, 14, 23 )
-
-[node name="RobinHood4" type="Sprite" parent="."]
-position = Vector2( 0, 256 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 77, 51, 14, 21 )
