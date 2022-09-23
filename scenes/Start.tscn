@@ -28,6 +28,8 @@ tile_data = PoolIntArray( 196612, 2, 65537, 196613, 2, 65537, 196614, 2, 65537, 
 
 [node name="Props" type="TileMap" parent="Map"]
 tile_set = ExtResource( 7 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 
 [node name="Decoration" type="Node" parent="."]
