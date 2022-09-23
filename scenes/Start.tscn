@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tilemaps/forest.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/props/BoneFire.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/props/rocks/StoneLarge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/props/rocks/StoneSmall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/props/rocks/StoneMedium.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/props/buildings/Building_1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/props/buildings/BenchSmall.tscn" type="PackedScene" id=12]
 
 [node name="Start" type="Node"]
@@ -78,6 +79,9 @@ position = Vector2( 80, 200 )
 
 [node name="BoneFire" parent="Bonfire" instance=ExtResource( 2 )]
 position = Vector2( 95, 185 )
+
+[node name="Building_1" parent="Bonfire" instance=ExtResource( 11 )]
+position = Vector2( 95, 53 )
 
 [node name="Portal" type="Node" parent="."]
 
