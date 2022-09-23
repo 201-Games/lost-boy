@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tilemaps/forest.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/props/BoneFire.tscn" type="PackedScene" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://scenes/props/rocks/StoneLarge.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/props/rocks/StoneSmall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/props/rocks/StoneMedium.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/props/buildings/Building_1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/props/buildings/BenchSmall.tscn" type="PackedScene" id=12]
 
 [node name="Start" type="Node"]
@@ -59,104 +58,99 @@ position = Vector2( 334, 45 )
 [node name="TreeGreen21" parent="Portal Trees (behind)" instance=ExtResource( 3 )]
 position = Vector2( 350, 64 )
 
-[node name="Decoration" type="Node" parent="."]
+[node name="Bonfire" type="Node" parent="."]
 
-[node name="BoneFire" parent="Decoration" instance=ExtResource( 2 )]
-position = Vector2( 95, 185 )
-
-[node name="Portal" parent="Decoration" instance=ExtResource( 4 )]
-position = Vector2( 326, 66 )
-
-[node name="Trees" type="Node" parent="."]
-
-[node name="TreeGreen10" parent="Trees" instance=ExtResource( 3 )]
-position = Vector2( 200, 88 )
-
-[node name="TreeGreen6" parent="Trees" instance=ExtResource( 3 )]
-position = Vector2( 200, 136 )
-
-[node name="TreeGreen7" parent="Trees" instance=ExtResource( 3 )]
-position = Vector2( 208, 144 )
-
-[node name="TreeGreen8" parent="Trees" instance=ExtResource( 3 )]
-position = Vector2( 202, 149 )
-
-[node name="TreeGreen4" parent="Trees" instance=ExtResource( 3 )]
-position = Vector2( 191, 148 )
-
-[node name="Bonfire" type="Node" parent="Trees"]
-
-[node name="TreeGreen5" parent="Trees/Bonfire" instance=ExtResource( 3 )]
+[node name="TreeGreen5" parent="Bonfire" instance=ExtResource( 3 )]
 position = Vector2( 98, 162 )
 
-[node name="TreeGreen3" parent="Trees/Bonfire" instance=ExtResource( 3 )]
+[node name="TreeGreen3" parent="Bonfire" instance=ExtResource( 3 )]
 position = Vector2( 109, 171 )
 scale = Vector2( 0.98912, 1 )
 
-[node name="TreeGreen" parent="Trees/Bonfire" instance=ExtResource( 3 )]
+[node name="TreeGreen" parent="Bonfire" instance=ExtResource( 3 )]
 position = Vector2( 120, 176 )
 
-[node name="TreeGreen2" parent="Trees/Bonfire" instance=ExtResource( 3 )]
+[node name="TreeGreen2" parent="Bonfire" instance=ExtResource( 3 )]
 position = Vector2( 120, 196 )
 
-[node name="BenchSmall" parent="Trees/Bonfire" instance=ExtResource( 12 )]
+[node name="BenchSmall" parent="Bonfire" instance=ExtResource( 12 )]
 position = Vector2( 80, 200 )
 
-[node name="Building_1" parent="Trees" instance=ExtResource( 11 )]
-position = Vector2( 112, 72 )
+[node name="BoneFire" parent="Bonfire" instance=ExtResource( 2 )]
+position = Vector2( 95, 185 )
 
-[node name="Portal" type="Node" parent="Trees"]
+[node name="Portal" type="Node" parent="."]
 
-[node name="TreeRed" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="Portal" parent="Portal" instance=ExtResource( 4 )]
+position = Vector2( 326, 66 )
+
+[node name="TreeRed" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 295, 48 )
 
-[node name="TreeRed2" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="TreeRed2" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 299, 60 )
 
-[node name="StoneMedium" parent="Trees/Portal" instance=ExtResource( 10 )]
+[node name="StoneMedium" parent="Portal" instance=ExtResource( 10 )]
 position = Vector2( 305, 123 )
 
-[node name="TreeRed4" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="TreeRed4" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 299, 137 )
 
-[node name="TreeGreen10" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen10" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 314, 101 )
 
-[node name="TreeGreen12" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen12" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 314, 118 )
 
-[node name="TreeRed5" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="TreeRed5" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 342, 92 )
 
-[node name="TreeGreen13" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen13" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 346, 103 )
 
-[node name="TreeGreen14" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen14" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 342, 120 )
 
-[node name="TreeGreen15" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen15" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 345, 132 )
 
-[node name="TreeGreen9" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen9" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 295, 152 )
 
-[node name="TreeGreen16" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen16" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 344, 177 )
 
-[node name="StoneLarge" parent="Trees/Portal" instance=ExtResource( 8 )]
+[node name="StoneLarge" parent="Portal" instance=ExtResource( 8 )]
 position = Vector2( 299, 79 )
 
-[node name="TreeRed6" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="TreeRed6" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 298, 95 )
 
-[node name="TreeGreen11" parent="Trees/Portal" instance=ExtResource( 3 )]
+[node name="TreeGreen11" parent="Portal" instance=ExtResource( 3 )]
 position = Vector2( 304, 105 )
 
-[node name="TreeRed3" parent="Trees/Portal" instance=ExtResource( 6 )]
+[node name="TreeRed3" parent="Portal" instance=ExtResource( 6 )]
 position = Vector2( 342, 155 )
 
-[node name="StoneSmall" parent="Trees/Portal" instance=ExtResource( 9 )]
+[node name="StoneSmall" parent="Portal" instance=ExtResource( 9 )]
 position = Vector2( 325, 157 )
+
+[node name="Others" type="Node" parent="."]
+
+[node name="TreeGreen10" parent="Others" instance=ExtResource( 3 )]
+position = Vector2( 200, 88 )
+
+[node name="TreeGreen6" parent="Others" instance=ExtResource( 3 )]
+position = Vector2( 200, 136 )
+
+[node name="TreeGreen7" parent="Others" instance=ExtResource( 3 )]
+position = Vector2( 208, 144 )
+
+[node name="TreeGreen8" parent="Others" instance=ExtResource( 3 )]
+position = Vector2( 202, 149 )
+
+[node name="TreeGreen4" parent="Others" instance=ExtResource( 3 )]
+position = Vector2( 191, 148 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 76, 180 )
