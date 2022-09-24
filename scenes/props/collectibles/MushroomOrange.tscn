@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/props/Mushroom_orange.atlastex" type="Texture" id=1]
+[ext_resource path="res://scripts/collectible.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3, 4.5 )
 
-[node name="MushroomBrown" type="StaticBody2D"]
+[node name="MushroomOrange" type="StaticBody2D" groups=["collectibles", "mushroom_orange"]]
+script = ExtResource( 2 )
 
 [node name="MushroomOrange" type="Sprite" parent="."]
 texture = ExtResource( 1 )
