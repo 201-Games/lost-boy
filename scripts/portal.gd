@@ -4,7 +4,7 @@ onready var portal_entry = $PortalEntry/CollisionShape2D
 
 export var disable_portal_entry = true
 
-func _process(delta: float) -> void:
+func _ready() -> void:
 	if(disable_portal_entry):
 		portal_entry.disabled = true
 	else:

@@ -54,6 +54,7 @@ script = ExtResource( 14 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -80,5 +81,13 @@ uppercase = true
 position = Vector2( 0, 5 )
 shape = SubResource( 4 )
 
+[node name="TeleportArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TeleportArea"]
+position = Vector2( 0, 3 )
+shape = SubResource( 2 )
+
 [connection signal="body_entered" from="CollectArea" to="." method="_on_CollectArea_body_entered"]
 [connection signal="body_exited" from="CollectArea" to="." method="_on_CollectArea_body_exited"]
+[connection signal="area_entered" from="TeleportArea" to="." method="_on_TeleportArea_area_entered"]
+[connection signal="area_exited" from="TeleportArea" to="." method="_on_TeleportArea_area_exited"]

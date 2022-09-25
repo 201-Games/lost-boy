@@ -8,6 +8,5 @@ onready var stone_red_count = $Collectibles/MushroomOrange/Count
 func _ready() -> void:
 	pass
 
-
 func _on_Player_on_pickup_collectible(type) -> void:
 	get(type + '_count').text = String(int(get(type + '_count').text) + 1)

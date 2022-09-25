@@ -15,6 +15,7 @@ const DIRECTION_TO_FRAME := {
 var velocity := Vector2.ZERO
 var direction := Vector2.RIGHT
 
+var can_teleport := false
 var can_pickup := false
 var current_items_in_area = []
 
@@ -26,6 +27,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(can_pickup and Input.is_action_just_pressed("doing")):
 		pickup_collectible_item()
+
+	if(can_teleport and Input.is_action_just_pressed("doing")):
+		teleport()
 
 
 func _physics_process(delta: float) -> void:
@@ -46,6 +50,9 @@ func set_sprite_direction() -> void:
 	direction_key.x = abs(direction_key.x)
 	if direction_key in DIRECTION_TO_FRAME:
 		animated_sprite.flip_h = sign(direction.x) == -1
+
+func teleport() -> void:
+	SceneTransition.change_scene("res://scenes/Main.tscn")
 
 
 func pickup_collectible_item() -> void:
@@ -84,11 +91,19 @@ func _on_CollectArea_body_entered(body: Node) -> void:
 
 func _on_CollectArea_body_exited(body: Node) -> void:
 	if(body.is_in_group("collectibles")):
-		can_pickup = false
 		var item_index = current_items_in_area.find(body)
 		current_items_in_area.remove(item_index)
 
 		if(current_items_in_area.size() == 0):
+			can_pickup = false
 			hide_dialog_box()
 
 
+func _on_TeleportArea_area_entered(area: Area2D) -> void:
+	if(area.is_in_group("portal_area")):
+		can_teleport = true
+
+
+func _on_TeleportArea_area_exited(area: Area2D) -> void:
+	if(area.is_in_group("portal_area")):
+		can_teleport = false
