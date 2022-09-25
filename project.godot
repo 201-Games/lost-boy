@@ -24,10 +24,12 @@ config/name="Lost Boy"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneTransition="*res://scenes/SceneTransition.tscn"
+
 [display]
 
-window/size/width=800
-window/size/height=400
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
