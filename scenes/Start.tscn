@@ -242,6 +242,7 @@ position = Vector2( 76, 180 )
 teleport_to = "main"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
 zoom = Vector2( 0.2, 0.2 )
 limit_left = 0
 limit_top = 0
@@ -250,7 +251,6 @@ limit_bottom = 270
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-editor_draw_screen = false
 editor_draw_limits = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
