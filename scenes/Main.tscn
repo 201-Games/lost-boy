@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/props/trees/TreeRed.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/props/BoneFire.tscn" type="PackedScene" id=2]
@@ -24,6 +24,14 @@
 [ext_resource path="res://scenes/props/collectibles/MushroomOrange.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/props/collectibles/StoneYellow.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/UILayer.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/props/Portal.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/fonts/Little Conquest.ttf" type="DynamicFontData" id=26]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 26 )
 
 [node name="Main" type="Node"]
 
@@ -737,6 +745,11 @@ position = Vector2( 448, 128 )
 
 [node name="StoneMedium" parent="Portal" instance=ExtResource( 9 )]
 position = Vector2( 448, 128 )
+
+[node name="Portal" parent="Portal" instance=ExtResource( 25 )]
+visible = false
+position = Vector2( 448, 128 )
+disable_portal_entry = false
 
 [node name="TreeOrangeSpots4" parent="Portal" instance=ExtResource( 12 )]
 position = Vector2( 472, 152 )
@@ -1477,11 +1490,31 @@ position = Vector2( 674, 232 )
 [node name="StoneYellow10" parent="Collectibles/StoneYellow" instance=ExtResource( 23 )]
 position = Vector2( 569, 284 )
 
+[node name="QuestCompletedText" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="QuestCompletedText"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -319.0
+margin_top = 57.0
+margin_right = 320.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 1 )
+text = "Quest completed! 
+It's time to go home, Lost boy. 
+Head back to the portal."
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
 [node name="UILayer" parent="." instance=ExtResource( 24 )]
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 666, -10 )
 scale = Vector2( 1.01063, 0.906091 )
+teleport_to = "end"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true

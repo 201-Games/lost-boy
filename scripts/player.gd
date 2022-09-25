@@ -2,14 +2,24 @@ extends KinematicBody2D
 
 signal on_pickup_collectible(type)
 
+export(String, "start", "main", "end") var teleport_to
+
 onready var animated_sprite := $AnimatedSprite
 onready var diaglog_box := $DialogBox/Label
+onready var quest_completed_text := $"../QuestCompletedText"
+onready var portal := $"../Portal/Portal"
+onready var broken_portal := $"../Portal/PortalBroken"
 
 const SPEED := 75
 const DIRECTION_TO_FRAME := {
 	Vector2.DOWN: 0,
 	Vector2.RIGHT: 2,
 	Vector2.UP: 4,
+}
+const SCENES := {
+	"start": "res://scenes/Start.tscn",
+	"main": "res://scenes/Main.tscn",
+	"end": "res://scenes/End.tscn"
 }
 
 var velocity := Vector2.ZERO
@@ -19,8 +29,8 @@ var can_teleport := false
 var can_pickup := false
 var current_items_in_area = []
 
-
 func _ready() -> void:
+	quest_completed_text.visible = false
 	diaglog_box.visible = false
 	animated_sprite.flip_h = false if direction.x == 1 else true
 
@@ -30,6 +40,9 @@ func _process(delta: float) -> void:
 
 	if(can_teleport and Input.is_action_just_pressed("doing")):
 		teleport()
+
+	if(get_tree().get_nodes_in_group("collectibles").size() == 0):
+		show_portal_open()
 
 
 func _physics_process(delta: float) -> void:
@@ -51,8 +64,16 @@ func set_sprite_direction() -> void:
 	if direction_key in DIRECTION_TO_FRAME:
 		animated_sprite.flip_h = sign(direction.x) == -1
 
+func show_portal_open() -> void:
+	broken_portal.visible = false
+	portal.visible = true
+	quest_completed_text.visible = true
+	yield(get_tree().create_timer(5), "timeout")
+	quest_completed_text.visible = false
+
+
 func teleport() -> void:
-	SceneTransition.change_scene("res://scenes/Main.tscn")
+	SceneTransition.change_scene(SCENES[teleport_to])
 
 
 func pickup_collectible_item() -> void:
