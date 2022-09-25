@@ -18,7 +18,7 @@
 [ext_resource path="res://scenes/props/buildings/BoxSmall.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/props/buildings/BoxSmall_1.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scripts/audio_background.gd" type="Script" id=18]
-[ext_resource path="res://assets/audio/Field 3.mp3" type="AudioStream" id=19]
+[ext_resource path="res://assets/audio/Town 2.mp3" type="AudioStream" id=19]
 [ext_resource path="res://scenes/props/buildings/BoxSmall_2.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/props/collectibles/MushroomBrown.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/props/collectibles/MushroomOrange.tscn" type="PackedScene" id=22]
