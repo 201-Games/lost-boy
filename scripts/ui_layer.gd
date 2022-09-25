@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 onready var mushroom_orange_count = $Collectibles/MushroomOrange/Count
-onready var mushroom_brown_count = $Collectibles/MushroomOrange/Count
-onready var stone_yellow_count = $Collectibles/MushroomOrange/Count
-onready var stone_red_count = $Collectibles/MushroomOrange/Count
+onready var mushroom_brown_count = $Collectibles/MushroomBrown/Count
+onready var stone_yellow_count = $Collectibles/StoneYellow/Count
+onready var stone_red_count = $Collectibles/StoneRed/Count
 
 func _ready() -> void:
 	pass

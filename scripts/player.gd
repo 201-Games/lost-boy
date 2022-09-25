@@ -61,11 +61,11 @@ func pickup_collectible_item() -> void:
 
 		if(item.is_in_group("mushroom_orange")):
 			collectible_type = "mushroom_orange"
-		if(item.is_in_group("mushroom_brown")):
+		elif(item.is_in_group("mushroom_brown")):
 			collectible_type = "mushroom_brown"
-		if(item.is_in_group("stone_yellow")):
+		elif(item.is_in_group("stone_yellow")):
 			collectible_type = "stone_yellow"
-		if(item.is_in_group("stone_red")):
+		elif(item.is_in_group("stone_red")):
 			collectible_type = "stone_red"
 
 		emit_signal("on_pickup_collectible", collectible_type)

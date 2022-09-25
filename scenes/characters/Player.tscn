@@ -46,7 +46,7 @@ animations = [ {
 extents = Vector2( 5, 7 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 12, 5 )
+extents = Vector2( 11.5, 14.5 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 14 )
@@ -54,7 +54,7 @@ script = ExtResource( 14 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -78,7 +78,7 @@ uppercase = true
 [node name="CollectArea" type="Area2D" parent="." groups=["mushroom_orange"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
-position = Vector2( 0, 5 )
+position = Vector2( 0.5, 2.5 )
 shape = SubResource( 4 )
 
 [node name="TeleportArea" type="Area2D" parent="."]

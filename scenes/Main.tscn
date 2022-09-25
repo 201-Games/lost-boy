@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/props/trees/TreeRed.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/props/BoneFire.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://scenes/props/collectibles/MushroomBrown.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/props/collectibles/MushroomOrange.tscn" type="PackedScene" id=22]
 [ext_resource path="res://scenes/props/collectibles/StoneYellow.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/UILayer.tscn" type="PackedScene" id=24]
 
 [node name="Main" type="Node"]
 
@@ -1476,6 +1477,8 @@ position = Vector2( 674, 232 )
 [node name="StoneYellow10" parent="Collectibles/StoneYellow" instance=ExtResource( 23 )]
 position = Vector2( 825, 148 )
 
+[node name="UILayer" parent="." instance=ExtResource( 24 )]
+
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 738, 76 )
 
@@ -1496,3 +1499,5 @@ editor_draw_limits = true
 stream = ExtResource( 19 )
 volume_db = -10.0
 script = ExtResource( 18 )
+
+[connection signal="on_pickup_collectible" from="Player" to="UILayer" method="_on_Player_on_pickup_collectible"]
