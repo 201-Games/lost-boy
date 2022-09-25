@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Emotional 2.mp3-5a912ca76afe19796d71c5f4ab48949d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Emotional 2.mp3"
+dest_files=[ "res://.import/Emotional 2.mp3-5a912ca76afe19796d71c5f4ab48949d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
