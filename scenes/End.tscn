@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://tilemaps/forest.tres" type="TileSet" id=1]
 [ext_resource path="res://tilemaps/forest_decor_1.tres" type="TileSet" id=2]
@@ -15,8 +15,50 @@
 [ext_resource path="res://scenes/props/buildings/Building_1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/audio/Emotional 2.mp3" type="AudioStream" id=14]
 [ext_resource path="res://scripts/audio_background.gd" type="Script" id=15]
+[ext_resource path="res://assets/fonts/Little Conquest.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://scripts/end_scene.gd" type="Script" id=17]
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_bottom = 5
+font_data = ExtResource( 16 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "RESET"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 31, 607 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "roll_up"
+length = 22.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.5, 22 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 31, 607 ), Vector2( 31, -366 ) ]
+}
 
 [node name="End" type="Node"]
+script = ExtResource( 17 )
 
 [node name="Map" type="Node" parent="."]
 
@@ -228,3 +270,26 @@ editor_draw_limits = true
 stream = ExtResource( 14 )
 volume_db = -10.0
 script = ExtResource( 15 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 31.0
+margin_top = 607.0
+margin_right = 294.0
+margin_bottom = 1324.0
+custom_fonts/font = SubResource( 5 )
+text = "There are times when we are the lost boy; Take a deep breath and try to relax, you’ll sure find your way back to the right track!
+
+Thank you for playing!
+
+Credits to:
+analogStudios_
+Landon
+
+#CozyFallJam2022"
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+anims/RESET = SubResource( 3 )
+anims/roll_up = SubResource( 4 )

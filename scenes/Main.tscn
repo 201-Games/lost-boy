@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/props/trees/TreeRed.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/props/BoneFire.tscn" type="PackedScene" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://scenes/UILayer.tscn" type="PackedScene" id=24]
 [ext_resource path="res://scenes/props/Portal.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/fonts/Little Conquest.ttf" type="DynamicFontData" id=26]
+[ext_resource path="res://scripts/quest_completed.gd" type="Script" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -1492,6 +1493,7 @@ position = Vector2( 569, 284 )
 
 [node name="QuestCompletedText" type="CanvasLayer" parent="."]
 visible = false
+script = ExtResource( 27 )
 
 [node name="Label" type="Label" parent="QuestCompletedText"]
 anchor_left = 0.5
@@ -1512,7 +1514,7 @@ uppercase = true
 [node name="UILayer" parent="." instance=ExtResource( 24 )]
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 666, -10 )
+position = Vector2( 447, 139 )
 scale = Vector2( 1.01063, 0.906091 )
 teleport_to = "end"
 

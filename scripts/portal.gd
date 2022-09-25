@@ -5,10 +5,10 @@ onready var portal_entry = $PortalEntry/CollisionShape2D
 export var disable_portal_entry = true
 
 func _ready() -> void:
-	if(disable_portal_entry):
-		portal_entry.disabled = true
-	else:
-		portal_entry.disabled = false
+	portal_entry.disabled = disable_portal_entry
+
+func _process(delta: float) -> void:
+	portal_entry.disabled = disable_portal_entry
 
 func _on_PortalEntry_body_entered(body: Node) -> void:
 	if body.name == "Player" and body.has_method("show_dialog_box"):
