@@ -188,6 +188,12 @@ position = Vector2( 81, 74 )
 [node name="TreeRed9" parent="Mid Decor" instance=ExtResource( 10 )]
 position = Vector2( 69, 81 )
 
+[node name="TreeRed10" parent="Mid Decor" instance=ExtResource( 10 )]
+position = Vector2( 134, 124 )
+
+[node name="TreeRed11" parent="Mid Decor" instance=ExtResource( 10 )]
+position = Vector2( 122, 131 )
+
 [node name="House" type="Node" parent="."]
 
 [node name="StoneSmall2" parent="House" instance=ExtResource( 5 )]
