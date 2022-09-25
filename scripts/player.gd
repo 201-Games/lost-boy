@@ -30,7 +30,8 @@ var can_pickup := false
 var current_items_in_area = []
 
 func _ready() -> void:
-	quest_completed_text.visible = false
+	if(quest_completed_text):
+		quest_completed_text.visible = false
 	diaglog_box.visible = false
 	animated_sprite.flip_h = false if direction.x == 1 else true
 
@@ -41,8 +42,9 @@ func _process(delta: float) -> void:
 	if(can_teleport and Input.is_action_just_pressed("doing")):
 		teleport()
 
-	if(get_tree().get_nodes_in_group("collectibles").size() == 0):
-		show_portal_open()
+	if(get_tree().get_current_scene().get_name() == "Main"):
+		if(get_tree().get_nodes_in_group("collectibles").size() == 0):
+			show_portal_open()
 
 
 func _physics_process(delta: float) -> void:
