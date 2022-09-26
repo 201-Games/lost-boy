@@ -163,30 +163,29 @@ margin_top = 160.0
 margin_right = 336.0
 margin_bottom = 457.0
 custom_fonts/font = SubResource( 3 )
-text = "You have travel into the anothe place...
+text = "You have travelled in time and found yourself lost in a new place...
 
-But for some reason, the portal broke down...
+... And for some reason, the portal broke down
 
-You have to collect 10 items each in order to go back to your place...
+You have to collect 10 of each essential items in order to go back to your place...
 
-Press space to continue..."
+... Press space to continue"
 autowrap = true
 uppercase = true
 percent_visible = 0.0
 
 [node name="end_level" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -288.0
-margin_top = 224.0
-margin_right = 288.0
-margin_bottom = 384.0
+margin_left = -185.0
+margin_top = 250.0
+margin_right = 391.0
+margin_bottom = 410.0
 custom_fonts/font = SubResource( 3 )
-text = "You have travel back into your place...
+text = "Welcome home, lost boy...
 
-this time it feels different...
-
-press space to continue..."
+...press space to continue"
 autowrap = true
 uppercase = true
 percent_visible = 0.0

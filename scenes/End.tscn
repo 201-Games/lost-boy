@@ -252,6 +252,7 @@ position = Vector2( 112, 59 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 328, 79 )
+teleport_to = null
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true

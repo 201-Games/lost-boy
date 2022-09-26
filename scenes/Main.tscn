@@ -850,9 +850,6 @@ position = Vector2( 260, 263 )
 [node name="StoneMedium5" parent="Bottom" instance=ExtResource( 9 )]
 position = Vector2( 248, 277 )
 
-[node name="TreeBrown22" parent="Bottom" instance=ExtResource( 14 )]
-position = Vector2( 100, 320 )
-
 [node name="TreeRed20" parent="Bottom" instance=ExtResource( 1 )]
 position = Vector2( 257, 288 )
 
@@ -1398,7 +1395,7 @@ position = Vector2( 486, 78 )
 [node name="Mushroom Brown" type="Node" parent="Collectibles"]
 
 [node name="MushroomBrown1" parent="Collectibles/Mushroom Brown" instance=ExtResource( 21 )]
-position = Vector2( 512, 233 )
+position = Vector2( 376, 167 )
 
 [node name="MushroomBrown2" parent="Collectibles/Mushroom Brown" instance=ExtResource( 21 )]
 position = Vector2( 425, 74 )
